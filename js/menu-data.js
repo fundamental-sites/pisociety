@@ -92,16 +92,22 @@ const menuData = [
                 "number": "12",
                 "name": "White Garlic & Mushroom",
                 "price": "$14 / $18",
-                "description": "Garlic oil base, mozzarella, roasted wild mushrooms, thyme, and black truffle oil drizzle. Four-Cheese Veggie | $15/19 San Marzano tomato sauce base, mozzarella, provolone, parmesan, ricotta dollops, bell peppers, red onion, and fresh baby spinach."
+                "description": "Garlic oil base, mozzarella, roasted wild mushrooms, thyme, and black truffle oil drizzle."
             },
             {
                 "number": "13",
+                "name": "Four-Cheese Veggie",
+                "price": "$15 / $19",
+                "description": "San Marzano tomato sauce base, mozzarella, provolone, parmesan, ricotta dollops, bell peppers, red onion, and fresh baby spinach."
+            },
+            {
+                "number": "14",
                 "name": "The Classic Margherita",
                 "price": "$14 / $18",
                 "description": "San Marzano tomato sauce base, fresh mozzarella pearls, fresh basil leaves, and extra virgin olive oil drizzle."
             },
             {
-                "number": "14",
+                "number": "15",
                 "name": "BYO Pizza",
                 "price": "$10 / $14",
                 "description": "Sauce Base: San Marzano tomato sauce, sweet BBQ or Garlic Oil \t\t                 Protein: Pepperoni, Italian Sausage, Bacon, Meatballs and/or Chicken $2 each                    Veggies: Basil, Red Onion, Mushroom, Sliced Red Onion, Bell Peppers, Spinach, Banana Peppers $1 Each"
