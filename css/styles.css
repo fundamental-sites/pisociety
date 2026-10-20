@@ -53,9 +53,9 @@ button { font: inherit; }
 .hero-actions { display: flex; gap: 14px; margin-top: 30px; }
 .hero-vertical { position: absolute; right: 26px; bottom: 90px; writing-mode: vertical-rl; letter-spacing: 3px; font-size: 10px; font-weight: 800; }
 
-.ticker { background: var(--red); color: #fff; overflow: hidden; padding: 20px 0; white-space: nowrap; font-family: Oswald, sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 3px; }
-.ticker div { width: max-content; animation: marquee 35s linear infinite; }
-.ticker span { margin: 0 34px; }
+.ticker { background: var(--red); color: #fff; overflow: hidden; padding: 20px 0; white-space: nowrap; font-family: Oswald, sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 3px; width: 100%; }
+.ticker div { display: flex; width: max-content; min-width: 200%; animation: marquee 45s linear infinite; }
+.ticker span { margin: 0 34px; flex-shrink: 0; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .section { padding: 110px 8%; }
