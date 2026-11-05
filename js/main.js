@@ -59,32 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- ORDER REDIRECT POPUP MODAL LOGIC ---
-    const orderUrl = "https://www.meandu.app/westfield-collective-mvo/counter";
-
-    // Create and inject modal markup dynamically
-    const modalHTML = `
-        <div id="orderModal" class="order-modal-overlay" style="display: none;">
-            <div class="order-modal-content">
-                <span class="order-modal-badge">SECURE PORTAL</span>
-                <h3>REDIRECTING TO ORDERING PORTAL</h3>
-                <p>You are now leaving the Pi Society Pizza site and being redirected to the secure online ordering portal for <br> Westfield Collective.</p>
-                <div class="order-modal-actions">
-                    <button id="proceedOrderBtn" class="btn btn-red" style="flex:1;">CONTINUE TO ORDER</button>
-                    <button id="cancelOrderBtn" class="btn btn-outline" style="flex:1; border-color: #ccc; color: #333;">CANCEL</button>
-                </div>
-            </div>
-        </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    const orderUrl = "https://order.toasttab.com/online/pi-society-wfc";
 
     const modal = document.getElementById('orderModal');
-    const proceedBtn = document.getElementById('proceedOrderBtn');
-    const cancelBtn = document.getElementById('cancelOrderBtn');
+    const proceedBtn = document.getElementById('proceedBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
     let targetRedirectUrl = orderUrl;
 
-    // Intercept clicks on order triggers and add class dynamically if needed
-    document.querySelectorAll('a[href*="meandu.app"]').forEach(trigger => {
-        trigger.classList.add('order-popup-trigger');
+    // Intercept clicks on order triggers
+    document.querySelectorAll('.order-popup-trigger').forEach(trigger => {
         trigger.addEventListener('click', (e) => {
             e.preventDefault();
             targetRedirectUrl = trigger.getAttribute('href') || orderUrl;

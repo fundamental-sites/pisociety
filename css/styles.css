@@ -247,3 +247,26 @@ footer { background: #171717; color: #fff; padding: 60px 8% 25px; }
         gap: 10px;
     }
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none; /* Hide by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: var(--white, #ffffff);
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}

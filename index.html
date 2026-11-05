@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#bb3224">
     <meta name="description" content="PI Society Pizza — family-owned pizza, good vibes, together. Explore our pizzas, pastas, salads and shareables.">
-    <title>PI Society Pizza | Pizza • Good Vibes • Together</title>
+    <title>PI Society Pizza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta property="og:site_name" content="PI Society Pizza">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PI Society Pizza",
+        "url": "https://pisocietypizza.com/"
+        }
+</script>
 </head>
 <body>
     <div class="topbar">GOOD PIZZA. GOOD COMPANY. TIMELESS.</div>
@@ -146,7 +155,7 @@
                 <h2>HUNGRY YET? <em>ORDER ONLINE</em></h2>
                 <p>Get your favorite pizzas, pastas, and shareables through the online portal.</p>
                 <div class="order-actions">
-                    <a href="https://order.toasttab.com/online/pi-society-wfc" target="_blank" rel="noopener" class="btn btn-light order-popup-trigger">ORDER ONLINE</a>
+                    <button class="btn btn-light order-popup-trigger">ORDER ONLINE</button>
                     <span>FAST • FRESH • EASY</span>
                 </div>
             </div>
@@ -183,6 +192,18 @@
             <span>Family-owned & operated.</span>
         </div>
     </footer>
+
+  <!-- External Redirect Popup Modal -->
+  <div class="modal-overlay" id="orderModal" style="display: none;">
+    <div class="modal-box" style="background: var(--white); padding: 40px; max-width: 500px; text-align: center; border-radius: 8px;">
+      <h3 style="color: var(--black); font-family: Oswald, sans-serif; font-size: 24px; margin-bottom: 15px;">REDIRECTING TO ORDER</h3>
+      <p style="color: var(--grey); margin-bottom: 30px;">You are now being redirected to our secure online ordering partner at Westfield Collective.</p>
+      <div class="modal-actions" style="display: flex; justify-content: center; gap: 15px;">
+        <button class="btn btn-red" id="proceedBtn">CONTINUE</button>
+        <button class="btn btn-outline" id="cancelBtn" style="color: var(--black); border-color: var(--black);">CANCEL</button>
+      </div>
+    </div>
+  </div>
 
     <script src="js/menu-data.js"></script>
     <script src="js/main.js"></script>
