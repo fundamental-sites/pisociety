@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#bb3224">
     <meta name="description" content="PI Society Pizza — family-owned pizza, good vibes, together. Explore our pizzas, pastas, salads and shareables.">
-    <title>PI Society Pizza | Pizza • Good Vibes • Together</title>
+    <title>PI Society Pizza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta property="og:site_name" content="PI Society Pizza, Good Pizza. Good Company. Timeless.">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PI Society Pizza",
+        "alternateName": "Pi Society Pizza: Good Pizza. Good Company. Timeless.",
+        "description": "Wood-fired artisan pizza located inside the Westfield Collective, just one mile south of the Droplight Grand Park Sports Campus.",        
+        "url": "https://pisocietypizza.com/"
+        }
+</script>
 </head>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TGFSW2G2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <body>
     <div class="topbar">GOOD PIZZA. GOOD COMPANY. TIMELESS.</div>
     
     <header class="header">
         <a class="brand" href="#home" aria-label="PI Society Pizza home">
-            <img src="images/pi_company_logo.png" alt="PI Society Pizza Logo">
+            <img src="images/pi_company_logo.webp" alt="PI Society Pizza Logo">
         </a>
         <nav aria-label="Main Navigation">
             <a href="#intro">About</a>
@@ -33,7 +50,7 @@
 
     <main id="home">
         <section class="hero">
-            <div class="hero-photo" role="img" aria-label="Delicious wood-fired pizza"></div>
+            <div class="hero-photo" role="img" aria-label="Delicious wood-fired pizza" fetchpriority="high"></div>
             <div class="hero-shade"></div>
             <div class="hero-content">
                 <span class="eyebrow"><span class="dot"></span>ESTABLISHED TRADITION</span>
@@ -126,8 +143,8 @@
             <h2 style="font-family: Oswald, sans-serif; font-size: clamp(36px, 5vw, 64px); margin: 20px 0;">VISIT & CONTACT</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 40px; text-align: left; max-width: 900px; margin-left: auto; margin-right: auto;">
                 <div>
-                    <h3 style="color: var(--red); font-family: Oswald, sans-serif; font-size: 20px; letter-spacing: 1px; margin-bottom: 10px;">ADDRESS</h3>
-                    <p style="color: #ccc; line-height: 1.6;">750 E 181st St,<br>Westfield, IN 46074<br>(Inside Westfield Collective)</p>
+                    <h3 style="color: var(--red); font-family: Oswald, sans-serif; font-size: 20px; letter-spacing: 1px; margin-bottom: 10px;">LOCATION/ADDRESS</h3>
+                    <p style="color: #ccc; line-height: 1.6;">750 E 181st St,<br>Westfield, IN 46074<br><br>We're inside Westfield Collective and 1-mile from the Droplight Grand Park Sports Campus</p>
                 </div>
                 <div>
                     <h3 style="color: var(--red); font-family: Oswald, sans-serif; font-size: 20px; letter-spacing: 1px; margin-bottom: 10px;">HOURS OF OPERATION</h3>
@@ -146,7 +163,7 @@
                 <h2>HUNGRY YET? <em>ORDER ONLINE</em></h2>
                 <p>Get your favorite pizzas, pastas, and shareables through the online portal.</p>
                 <div class="order-actions">
-                    <a href="https://order.toasttab.com/online/pi-society-wfc" target="_blank" rel="noopener" class="btn btn-light order-popup-trigger">ORDER ONLINE</a>
+                    <button class="btn btn-light order-popup-trigger">ORDER ONLINE</button>
                     <span>FAST • FRESH • EASY</span>
                 </div>
             </div>
@@ -157,7 +174,7 @@
     <footer>
         <div class="footer-top">
             <div>
-                <img src="images/pi_company_logo.png" alt="PI Society Pizza Logo">
+                <img src="images/pi_company_logo.webp" alt="PI Society Pizza Logo">
                 <p style="margin-top: 15px; color: #999;">GOOD PIZZA. GOOD COMPANY. TIMELESS.</p>
                 <div class="legal-links">
                     <a href="/privacy.html">Privacy Policy</a>
@@ -184,7 +201,19 @@
         </div>
     </footer>
 
-    <script src="js/menu-data.js"></script>
-    <script src="js/main.js"></script>
+  <!-- External Redirect Popup Modal -->
+  <div class="modal-overlay" id="orderModal" style="display: none;">
+    <div class="modal-box">
+      <h3 style="color: var(--black); font-family: Oswald, sans-serif; font-size: 24px; margin-bottom: 15px;">REDIRECTING TO ORDER</h3>
+      <p style="color: var(--grey); margin-bottom: 30px;">You are now being redirected to our secure online ordering partner website.</p>
+      <div class="modal-actions" style="display: flex; justify-content: center; gap: 15px;">
+        <button class="btn btn-red" id="proceedBtn">CONTINUE</button>
+        <button class="btn btn-outline" id="cancelBtn" style="color: var(--black); border-color: var(--black);">CANCEL</button>
+      </div>
+    </div>
+  </div>
+
+    <script defer src="js/menu-data.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 </html>

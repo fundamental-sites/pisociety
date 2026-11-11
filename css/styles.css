@@ -7,6 +7,18 @@
 }
 
 * { box-sizing: border-box; }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--cream); color: var(--black); font-family: 'DM Sans', sans-serif; }
 a { color: inherit; text-decoration: none; }
@@ -46,9 +58,9 @@ button { font: inherit; }
 .eyebrow { color: #fff; }
 .dot { display: inline-block; width: 8px; height: 8px; background: var(--red); border-radius: 50%; margin-right: 10px; }
 
-.hero h1, h2 { font-family: Oswald, Impact, sans-serif; font-weight: 700; line-height: 1.06; letter-spacing: -1.7px; }
-.hero h1 { font-size: clamp(64px, 8vw, 125px); margin: 25px 0; }
-.hero h1 em, h2 em { color: var(--red); font-style: normal; }
+.hero .hero-title, .hero h1, h2 { font-family: Oswald, Impact, sans-serif; font-weight: 700; line-height: 1.06; letter-spacing: -1.7px; }
+.hero .hero-title { font-size: clamp(64px, 8vw, 125px); margin: 25px 0; }
+.hero .hero-title em, h2 em { color: var(--red); font-style: normal; }
 .hero p { max-width: 515px; line-height: 1.8; color: #e6e1dc; font-size: 16px; }
 .hero-actions { display: flex; gap: 14px; margin-top: 30px; }
 .hero-vertical { position: absolute; right: 26px; bottom: 90px; writing-mode: vertical-rl; letter-spacing: 3px; font-size: 10px; font-weight: 800; }
@@ -186,7 +198,7 @@ footer { background: #171717; color: #fff; padding: 60px 8% 25px; }
     .header nav.open { display: flex; }
     .hero { min-height: 600px; }
     .hero-content { margin: 0 6%; padding: 75px 0; }
-    .hero h1 { font-size: clamp(56px, 12vw, 90px); }
+    .hero .hero-title { font-size: clamp(56px, 12vw, 90px); }
     .hero-shade { background: linear-gradient(90deg, #0d0a08e8, #0d0a08a3); }
     .hero-vertical { display: none; }
     .section { padding: 75px 6%; }
@@ -200,7 +212,7 @@ footer { background: #171717; color: #fff; padding: 60px 8% 25px; }
 
 @media(max-width: 480px) {
     .topbar { font-size: 9px; letter-spacing: 1.5px; }
-    .hero h1 { font-size: 56px; }
+    .hero .hero-title { font-size: 56px; }
     .hero-actions { flex-wrap: wrap; }
     .hero-actions .btn { width: 100%; }
     .hero p { font-size: 14px; }
