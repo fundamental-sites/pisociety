@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- ORDER REDIRECT POPUP MODAL LOGIC ---
-    const orderUrl = "https://order.toasttab.com/online/pi-society-wfc";
+    const orderUrl = "https://order.toasttab.com/online/pi-society";
 
     const modal = document.getElementById('orderModal');
     const proceedBtn = document.getElementById('proceedBtn');
